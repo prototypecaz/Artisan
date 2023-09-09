@@ -1,0 +1,39 @@
+{% block body %}
+
+<body>
+{# une autre façon d'inclure du css dynamiquement #}
+ {#  <body style = "background-image: url('./assets/upload/{{backgroundImg[0]['background']}}');"> #}
+        {# inclure le fichier Twig contenant le block #}
+        
+        {% include('header.block.html.twig') %}
+        {# appel du block #}
+        {% block header %}{% endblock %}
+
+         <main>
+        {# inclure le fichier Twig contenant le block #}
+        {% include('main.block.html.twig') %}
+        {# appel du block #}
+        {% block main %}{% endblock %}
+        
+        {% include('connexion.block.html.twig') %}
+        {% block connexion %}{% endblock %}
+         </main>
+        {# inclure le fichier Twig contenant le block #}
+        {% include('footer.block.html.twig') %}
+        {# appel du block #}
+        {% block footer %}{% endblock %}
+
+    
+     <script src="./js/avis.js"></script>
+     <script src="./js/client.js"></script>
+      
+        {# <script type="text/javascript" src="./assets/js/activate.js"></script> #}
+     
+     
+     {#    <script type="text/javascript" src="./assets/js/registerUser.js"></script> #}
+    
+     
+  </body>
+</html>
+
+{% endblock %}

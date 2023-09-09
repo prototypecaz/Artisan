@@ -1,0 +1,32 @@
+{% block inscription %}
+
+
+    <!-- Formulaire d'inscription -->
+
+    <form method="POST" action="./registerUser.php" class="col-12 col-sm-12 col-md-8 offset-md-2 text-center mt-3">
+        
+        <div class="form-group">
+             <label class="bg-dark h5 text-primary rounded px-3 py-1 w-100" for="email">Votre email</label>
+            <input type="email" name="email" maxlength="320" class="form-control text-center" placeholder="adrien.dupont@gmail.com" required />
+        </div>
+
+        <div class="form-group">
+            <label class="bg-dark h5 text-primary rounded px-3 py-1 w-100">Veuillez saisir un mot de passe</label>
+            <input type="password" id="first" minlength="8" autocomplete="off" class="form-control text-center" placeholder="********" required />
+            <span id="strengt"></span>
+        </div>
+
+        <div class="form-group">
+            <label class="bg-dark h5 text-primary rounded px-3 py-1 w-100" for="password">Resaisir le mot de passe</label>
+            <input type="password" name="password" id="last" minlength="8" autocomplete="off" class="form-control text-center" placeholder="********" required disabled />
+        </div>
+
+        <div class="form-group">
+            <button class="btn-primary w-50 rounded h5 py-1" type="submit" id="submit" disabled>S'inscrire</button>
+        </div>
+    </form>
+     <div class="col-12 col-md-6 mx-auto border border-dark bg-danger text-white h3 text-center rounded mb-3 mt-3" id="erreurs"></div>
+    <script type="text/javascript" src="./assets/js/loginUser.js"></script>
+    <script type="text/javascript" src="./assets/js/registerUser.js"></script>
+   
+    {% endblock %}

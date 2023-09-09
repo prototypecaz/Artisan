@@ -1,0 +1,109 @@
+
+
+{% block recherche %}
+
+
+{% if rechercheEntreprise is empty %}
+<p class="font-weight-bold div" style="font-size:23px;margin-bottom:60px">Aucune société inscrite</p>
+
+{% else %}
+
+
+{% for recherche in rechercheEntreprise %}
+
+
+{% if recherche[0] is null %}
+
+<div style="width: 55em; height: 250px; border: 2px solid rgb(224, 224, 224); border-radius: 10px; margin-bottom: 17px; padding: 20px;" class="div row align-items-center">
+    <div class="col-2 d-flex justify-content-center">
+        {% if recherche.logo == "" %}
+        <img src="./assets/img/pseudoImg.jpg" class=" rounded-circle" style="height: 125px; width: 125px;">
+        {% else %}
+         <img src="./assets/img/uploads/{{recherche.logo}}" class=" rounded-circle" style="height: 125px; width: 125px;">
+        {% endif %}
+    </div>
+    <div class=" col-7 ml-2">
+        <a id="entreprise" class="font-weight-bold" style="font-size: 20px; text-decoration: none;" href="./?entrepriseUnique=undefined&amp;etablissement={{recherche.id}}">{{recherche.nom_raison_sociale}}</a>
+        <p class="mb-0 mt-2 text-uppercase font-weight-bold" style="font-size: 14px;">{{recherche.ville_nom}}</p>
+        <p class="mb-0 mt-1 text-uppercase font-weight-bold" style="font-size: 13px;">Date de création: {{recherche.dateSociete}}</p>
+        <p></p>
+        <btn class="btn btn-info font-weight-bold mt-4" style="cursor: pointer;" onclick="apparitionBoutton(this,'{{recherche.telephone}}')">Téléphone</btn>
+        <btn class="btn btn-info mx-3 font-weight-bold mt-4" style="cursor: pointer;" onclick="apparitionBoutton(this,'{{recherche.email}}')">E-mail</btn>
+        <a class="btn btn-info font-weight-bold text-white mt-4" style="cursor: pointer;" onclick="apparitionBoutton(this,'{{recherche.siteWeb}}')">Site web</a>
+    </div>
+    <div class="divBtn d-flex flex-column-reverse align-items-center" id="{{recherche.id}}">
+        <button class=" btnVoteAvis btn btn-success rounded font-weight-bold" style="width: 155px; margin-top: 81px;" value="{{recherche.id}}">Votre avis</button>
+        <p style="cursor: default; font-size: 14px; color: rgb(71, 71, 71); font-family: Trip Sans VF, Trip Sans, Arial, sans-serif;" class="mb-0 ml-2"></p>
+        
+        
+    </div>
+</div>
+
+{% elseif recherche[0] is not null %}
+
+{% if recherche|length < 2 %}
+<div style="width: 55em; height: 250px; border: 2px solid rgb(224, 224, 224); border-radius: 10px; margin-bottom: 17px; padding: 20px;" class="div row align-items-center">
+    <div class="col-2 d-flex justify-content-center">
+        {% if recherche[0].logo == "" %}
+        <img src="./assets/img/pseudoImg.jpg" class=" rounded-circle" style="height: 125px; width: 125px;">
+        {% else %}
+         <img src="./assets/img/uploads/{{recherche[0].logo}}" class=" rounded-circle" style="height: 125px; width: 125px;">
+        {% endif %}
+    </div>
+    <div class=" col-7 ml-2">
+        <a id="entreprise" class="font-weight-bold" style="font-size: 20px; text-decoration: none;" href="./?entrepriseUnique=undefined&amp;etablissement={{recherche[0].id}}">{{recherche[0].nom_raison_sociale}}</a>
+        <p class="mb-0 mt-2 text-uppercase font-weight-bold" style="font-size: 14px;">{{recherche[0].ville_nom}}</p>
+        <p class="mb-0 mt-1 text-uppercase font-weight-bold" style="font-size: 13px;">Date de création: {{recherche[0].dateSociete}}</p>
+        <p></p>
+        <btn class="btn btn-info font-weight-bold mt-4" style="cursor: pointer;" onclick="apparitionBoutton(this,'{{recherche[0].telephone}}')">Téléphone</btn>
+        <btn class="btn btn-info mx-3 font-weight-bold mt-4" style="cursor: pointer;" onclick="apparitionBoutton(this,'{{recherche[0].email}}')">E-mail</btn>
+        <a class="btn btn-info font-weight-bold text-white mt-4" style="cursor: pointer;" onclick="apparitionBoutton(this,'{{recherche[0].siteWeb}}')">Site web</a>
+    </div>
+    <div class="divBtn d-flex flex-column-reverse align-items-center" id="{{recherche[0].id}}">
+        <button class=" btnVoteAvis btn btn-success rounded font-weight-bold" style="width: 155px; margin-top: 56px;" value="{{recherche[0].id}}">Votre avis</button>
+        <p style="cursor: default; font-size: 14px; color: rgb(71, 71, 71); font-family: Trip Sans VF, Trip Sans, Arial, sans-serif;" class="mb-0 ml-2"></p>
+        
+        
+    </div>
+</div>
+
+{% else %}
+
+{% for recherch in  recherche %}
+   <div style="width: 55em; height: 250px; border: 2px solid rgb(224, 224, 224); border-radius: 10px; margin-bottom: 17px; padding: 20px;" class="div row align-items-center">
+    <div class="col-2 d-flex justify-content-center">
+        {% if recherch.logo == "" %}
+        <img src="./assets/img/pseudoImg.jpg" class=" rounded-circle" style="height: 125px; width: 125px;">
+        {% else %}
+         <img src="./assets/img/uploads/{{recherch.logo}}" class=" rounded-circle" style="height: 125px; width: 125px;">
+        {% endif %}
+    </div>
+    <div class=" col-7 ml-2">
+        <a id="entreprise" class="font-weight-bold" style="font-size: 20px; text-decoration: none;" href="./?entrepriseUnique=undefined&amp;etablissement={{recherch.id}}">{{recherch.nom_raison_sociale}}</a>
+        <p class="mb-0 mt-2 text-uppercase font-weight-bold" style="font-size: 14px;">{{recherch.ville_nom}}</p>
+        <p class="mb-0 mt-1 text-uppercase font-weight-bold" style="font-size: 13px;">Date de création: {{recherch.dateSociete}}</p>
+        <p></p>
+        <btn class="btn btn-info font-weight-bold mt-4" style="cursor: pointer;" onclick="apparitionBoutton(this,'{{recherch.telephone}}')">Téléphone</btn>
+        <btn class="btn btn-info mx-3 font-weight-bold mt-4" style="cursor: pointer;" onclick="apparitionBoutton(this,'{{recherch.email}}')">E-mail</btn>
+        <a class="btn btn-info font-weight-bold text-white mt-4" style="cursor: pointer;" onclick="apparitionBoutton(this,'{{recherch.siteWeb}}')">Site web</a>
+    </div>
+    <div class="divBtn d-flex flex-column-reverse align-items-center" id="{{recherch.id}}">
+        <button class=" btnVoteAvis btn btn-success rounded font-weight-bold" style="width: 155px; margin-top: 56px;" value="{{recherch.id}}">Votre avis</button>
+        <p style="cursor: default; font-size: 14px; color: rgb(71, 71, 71); font-family: Trip Sans VF, Trip Sans, Arial, sans-serif;" class="mb-0 ml-2"></p>
+        
+        
+    </div>
+</div>
+{% endfor %}
+
+{% endif %}
+{% endif %}
+
+{% endfor %}
+
+
+
+
+
+{% endif %}
+{% endblock %}

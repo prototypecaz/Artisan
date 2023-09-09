@@ -1,0 +1,851 @@
+
+@font-face
+{
+    font-family: taFont;
+    src: url(../font/volk.ttf);
+
+    
+}
+
+
+
+
+@font-face
+{
+    font-family: taFont1;
+    src: url(../font/Dunley.otf);
+
+    
+}
+
+@font-face
+{
+    font-family: taFont2;
+    src: url(../font/Sansita-BoldItalic.otf);
+
+    
+}
+
+@font-face {
+    font-family: taFont3;
+    src: url(../font/PlayfairDisplay-Italic.ttf);
+}
+
+@font-face {
+    font-family: taFont4;
+    src: url(../font/OpenSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: taFont5;
+    src: url(../font/Roboto-Regular.ttf);
+}
+
+.titreAvisUnique{
+    font-family: taFont5;
+}
+
+.texteAvisUnique,.metierValue,#divRayonReturn{
+    font-family: taFont4;
+}
+
+.avisSocieteUnique{
+    font-family: taFont3;
+    margin-top: 140px;
+}
+
+.informationConnexion{
+    font-family: taFont1;
+    text-align: center;
+}
+ 
+.nomSite
+{
+   font-family: taFont1;
+
+   
+}
+.note{
+    font-size: 30px;
+    color: crimson;
+}
+
+.inputConnectUser:focus{
+   
+    outline:none;
+    box-shadow: #00b7cf 0px 1px 4px,  #00b7cf 0px 0px 0px 3px;
+}
+
+.header{
+    background-image: url("../img/pexels.jpg");
+    background-position-y: 61%;
+    box-shadow: rgba(117, 117, 117, 0.19) 0px 10px 20px, rgba(117, 117, 117, 0.23) 0px 6px 6px;
+    height: 530px;
+    background-size: cover ;
+    background-repeat: no-repeat;
+}
+
+.autreContainer {
+    height: 80px;
+    width: 80px;
+    margin-top: 130px;
+    position: relative;
+    /*margin-bottom: 50px;*/
+  }
+
+  .flecheChargement {
+    font-size: 34px!important;
+    color: black;
+    bottom: 27px;
+    position: absolute;
+    left: 50%;
+    margin-left: -15px;
+    animation-name:arrow;
+    animation-duration:1s;
+    animation-timing-function:linear;
+    animation-delay:0s;
+    animation-iteration-count:infinite;
+    animation-direction:normal;
+    animation-play-state:running;
+    -webkit-animation-name:arrow;
+    -webkit-animation-duration:1s;
+    -webkit-animation-timing-function:linear;
+    -webkit-animation-delay:0s;
+    -webkit-animation-iteration-count:infinite;
+    -webkit-animation-direction:normal;
+    -webkit-animation-play-state:running;
+  }
+  .pulse {
+      margin: 0 auto;
+      border-radius: 100px;
+      position: absolute;
+    left: 5px;
+      top: 5px;
+      z-index: 0;
+      background-color: transparent;
+      opacity: 0;
+      width: 110px;
+      height: 110px;
+      border: 10px solid #00baff;
+      -webkit-border-radius: 100px;
+      -moz-border-radius: 100px;
+      -o-border-radius: 100px;
+      -ms-border-radius: 100px;
+      border-radius: 100px;
+      /* Giving Animation Function */
+     
+      border-image: initial;
+      
+  }
+  
+  @keyframes arrow
+      {
+      0%   {bottom:0;}
+      75% {bottom:55px;}
+      100% {bottom:0;}
+      }
+  @-webkit-keyframes arrow
+      {
+      0%   {bottom:0;}
+    75% {bottom:55px;}
+      100% {bottom:0;}
+    }
+  @keyframes circle
+      {
+      0%   {height:70px;}
+      10% {height: 70px;}
+    50% {height: 80px;}
+      75% {height: 100px;}
+    90% {height: 80px;}
+      100% {height: 70px;}
+      }
+  @-webkit-keyframes circle
+      {
+      0%   {height:120px;}
+      10% {height: 120px;}
+    50% {height: 130px;}
+      75% {height: 150px;}
+    90% {height: 130px;}
+      100% {height: 120px;}
+      }
+ 
+/*:root{ scrollbar-width: none !important } */
+
+.btnInscription{
+margin-left: 34vh;
+}
+
+.sectionRecherche{
+    background-color: #16191b;
+    height: 210px;
+    width: 950px;
+    top:-485%!important;
+    left: 19.8%;
+    border-radius: 0px 15px 15px 15px;
+    filter: drop-shadow(0 0 0.75rem rgb(187, 187, 187));
+    z-index: 1;
+}
+
+.divRecherche{
+   
+    margin-top: -40px;
+}
+
+
+
+.titreBonArtisan{
+    
+    top:31.9%;
+    font-size: 82px;
+    left:3%;
+    font-weight: bold;
+    font-family: taFont;
+    color: #0f1011;
+    text-shadow: -4.5px -1px 0 white, 2px 6.5px 5px rgba(0, 0, 0, 0.281), 12px 13px 18px rgba(0, 0, 0, 0.541);
+    transform: rotateY(40deg);
+   
+}
+
+#boutton{
+    left:73%;
+    top:77.8%;
+    width: 210px;
+    height: 53px;
+    border-radius: 10px;
+    font-size: 17px;
+    z-index: 2;
+    background-color: #23aaf2;
+    border-top: 2px solid white!important;
+    border-left:2px solid white!important;
+    border-bottom: 2px solid #959595!important;
+    border-right: 2px solid #959595!important;
+
+    outline: none!important;
+}
+
+#boutton:active{
+ outline: none!important;
+ border-bottom: 2px solid white!important;
+ border-right:2px solid white!important;
+ border-top: 2px solid #959595!important;
+ border-left: 2px solid #959595!important;
+}
+
+
+
+.inputRecherche{
+    height: 40px;
+    /*width: 42vh;*/
+    background-color: rgb(238, 232, 224);
+    border:         1px solid rgb(207, 210, 219);
+    border-radius:  5px;
+   
+  
+}
+
+.inputFleche{
+    -webkit-appearance:     none;
+    -moz-appearance:        none;
+    appearance:             none;
+    display:        inline-block;
+    padding:        .5em 2em .5em .9em;
+    cursor:         pointer;
+    color:          rgb(70, 81, 88);
+    font-family:    inherit;
+    font-size:      1em;
+    border:         1px solid rgb(207, 210, 219);
+    border-radius:  5px;
+    background-color: rgb(238, 232, 224);
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMjAwJyBoZWlnaHQ9JzIwMCcgZmlsbD0iIzAwMDAwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiB2aWV3Qm94PSIwIDAgMjQgMjQiIHg9IjBweCIgeT0iMHB4Ij48cGF0aCBmaWxsPSIjMDAwMDAwIiBkPSJNMTIgMThsLTExLjAxOS0xMWgyMi4wMzh6Ii8+PC9zdmc+);
+    background-size: .8em;
+    background-repeat: no-repeat;
+    background-position: calc(100% - .4em) center;
+  
+}
+
+.icone1{
+    font-size: 30px;
+}
+
+.divVille{
+    width: 316px!important;
+   
+    font-family: taFont4;
+    display: block!important;
+    left: 34.90%;
+    top:46.5%
+}
+
+.metierValue:hover,.rayonValue:hover,.villeUnique:hover{
+    color:#0cc990;
+}
+
+
+
+.metierValue:active{
+    color:rgb(197, 196, 196)
+}
+
+#artisans{
+    margin-top: 27vh!important;
+  
+}
+
+#test:focus{
+   
+    box-shadow: #23aaf2 0px 1px 4px, #23aaf2 0px 0px 0px 3px;
+   outline: none;
+   border: none!important;
+   
+}
+
+#test{
+    border:none
+}
+
+#rayon:focus{
+    box-shadow: #23aaf2 0px 1px 4px, #23aaf2 0px 0px 0px 3px!important;
+    outline: none!important
+    
+ }
+
+#divRayonReturn{
+    z-index: 3;
+}
+ 
+
+#returnArrowMetier{
+    background-color:rgb(238, 232, 224);
+}
+
+.spanFleche{
+    font-size: 25px;
+}
+
+#body{
+    margin-top: -20px;
+    position: relative;
+    z-index: 6;
+    
+}
+
+.controle{
+    top: -26.7%;
+    height: 56.2px;
+    left:1.6%;
+    border-radius: 15px 15px 0px 0px;
+    width: 23em;
+    z-index: -1;
+}
+
+.divControle{
+    border-radius: 15px 0px 0px 0px;
+    background-color: #16191b;
+    color: white;
+    cursor: pointer;
+   
+}
+
+.divControle1{
+    border-radius: 0px 15px 0px 0px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.699);
+}
+
+.lettreTitre{
+    color:#23aaf2
+}
+
+.divTitreAvis{
+    width: 32em!important;
+}
+
+.champs{
+    height: 5px;
+    font-size: 12px;
+    line-height: 6px;
+    color: red;
+}
+
+.noteChamp{
+    width: 32em;
+}
+
+
+
+.croixVote{
+    right:2%;
+    top:-137px;
+    
+}
+ 
+
+
+
+ .rating2 a {
+   /* float: right!important;*/
+    color: #aaa;
+    text-decoration: none;
+    font-size: 3em;
+    transition: color .4s;
+    line-height: 60px!important;
+ }
+ 
+ /*.rating2 a:hover,
+ .rating2 a:focus,
+ .rating2 a:hover ~ a,
+ .rating2 a:focus ~ a {
+    color: orange;
+    cursor: pointer;
+ }*/
+
+
+
+ .imgPhotoDiv{
+     width: 50px;
+     height: 50px;
+ }
+
+ .croix{
+     width: 15px;
+     height: 15px;
+     vertical-align: top;
+ }
+
+ input[type="file"] {
+    height: 0;
+    width: 0;
+    overflow: hidden;
+  }
+  
+  input[type="file"] + label {
+    border: 1px solid rgba(0,0,0,.2);
+    padding: 5px;
+    background: black;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+
+  }
+
+  #choixPhotoProfil:hover{
+      color:black!important
+  }
+
+  input[type="file"] + label:hover {
+    border: 1px solid rgba(0,0,0,.2);
+    padding: 5px;
+    background: rgba(0, 0, 0, 0.747);
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+
+  }
+
+  .modalPhoto{
+      
+     height: 350px!important;
+  }
+
+.backLogo{
+    width: 52px;
+    height:52px;
+    border-radius: 50%;
+    background-color: rgb(253, 253, 253);
+    top:-4%;
+    left:16%;
+}
+
+.modal-picture{
+    margin-top: 20vh;
+}
+
+.sectionVote{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+   
+    top:0%;
+    z-index: 10!important;
+    background-color: rgba(0,0,0,0.4);
+    height: 100%;
+    
+    
+}
+
+.divValeur{
+    background-color: white;
+    
+    width: 700px;
+    height: 100%;
+    float: right;
+    
+}
+
+
+
+.ajoutSociete{
+    
+    cursor: pointer;
+}
+
+.ajoutSociete:hover {
+    color:#23aaf2!important;
+}
+
+.erreurChampsSociete{
+    font-size: 7px;
+    color:red;
+    left: 102%;
+    top:18%;
+    width: 100px!important;
+    
+}
+
+.erreurChampsSocieteConfirm{
+    font-size: 7px;
+    color:red;
+    left: 100%;
+    top:18%;
+    width: 100px!important;
+}
+
+
+.loader{
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+}
+
+.loader-quart{
+    border-radius: 50px;
+    border: 6px solid rgba(5, 0, 0, 0.938);
+}
+
+.loader-quart:after{
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    bottom: -6px;
+    right: -6px;
+    border-radius: 50px;
+    border: 6px solid transparent;
+    border-top-color: #FFF;
+    -webkit-animation: rotation 1s linear infinite;
+    animation: rotation 1s linear infinite;
+}
+
+@-webkit-keyframes rotation{
+    0%{
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    
+    100%{
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotation{
+    0%{
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    
+    100%{
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+#modalContenus{
+    height: 440px;
+}
+
+.containerDivValeur{
+    margin-left: 0px!important;
+    margin-right: 0px!important;
+    margin-top: 70px;
+}
+
+.imgValide{
+    width: 145px;
+}
+
+.redirection{
+    Font-family: taFont2; 
+    font-size: 18.5px;
+}
+
+.inputConnexionHeader{
+    width: 40%!important;
+}
+
+.awesome{
+    font-family: 'FontAwesome', Helvetica; 
+    font-size:18px
+}
+
+
+
+.inputAjoutSociete{
+    width: 11em;
+}
+
+.bienvenueSociete{
+    margin-top: 33vh; /* poussé de la moitié de hauteur de viewport */
+    transform: translateY(-50%); 
+    color: white;
+}
+
+.inputAjoutSociete:focus,#descriptionArtisan:focus{
+    box-shadow: #80c10f 0px 1px 4px, #80c10f 0px 0px 0px 3px!important;
+    outline: none;
+}
+
+.divBodyInscriptionVille{
+    position: absolute;
+    
+    z-index: 1;
+    top:28.3%
+}
+
+.bienvenueUser{
+    margin-top: 18vh; /* poussé de la moitié de hauteur de viewport */
+    transform: translateY(-50%); 
+    color: white
+}
+
+.inputConnectUser{
+    width: 193px;
+}
+
+.awesomeCommentaire{
+    font-family: 'FontAwesome', Helvetica; 
+    font-size:16px
+}
+
+.rectangleEntreprise{
+    height: 250px;
+    background-color: rgba(0,0,0,.5);
+    width: 100%;
+    margin-top: 10px;
+    display: block;
+}
+
+.sectionEntreprise{
+    background-color: white;
+    box-shadow:0 0 0.95rem 3px dimgray;
+    top:-16.4%;
+    left: 12.5%
+}
+
+.imgLogoEntreprise{
+    transform: translate3d(0,-67%,0)!important;
+    
+}
+
+.iconeSociete{
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.divInfoSociete{
+    width: 94px;
+    height: 80px;
+    background-color: #0cc990;
+    color: white;
+    padding: 48px;
+    cursor: pointer;
+}
+
+.divPhoneEmail{
+    margin-top: 7em;
+}
+
+.photoSocieteUnique{
+    height: 27em;
+    width: 100%;
+    background-color: #e9e6e6;
+   
+    
+}
+
+.imgPhotoChantier{
+    height:150px;
+    background-color:white;
+    cursor: pointer;
+    max-width: 46%!important;
+    width: 185px!important;
+}
+
+.hrSocieteUnique{
+    margin-bottom: 70px;
+}
+
+.carouselLeft{
+    left:-23%!important;
+   
+  
+}
+
+.carouselRight{
+    right:-23%!important
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon{
+    width: 40px!important;
+    height:86px!important;
+    
+
+}
+
+.closePhotoSociete{
+    right:-44%;
+    top:-14%;
+    z-index: 3;
+    color: white!important;
+    opacity: 1!important;
+    text-shadow: none!important;
+    
+}
+
+.awesomePhotoSociete{
+    font-family: 'FontAwesome', Helvetica; 
+    color:white;
+    background-image: none!important;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.awesomePhotoSociete:active{
+    color:rgb(197, 197, 197)
+}
+.closePhotoSociete:active{
+    color:rgb(197, 197, 197)
+}
+.carousel-control-next, .carousel-control-prev{
+    opacity: 1!important;
+}
+
+.retourLigne{
+    word-wrap: break-word;
+    word-spacing: -0.03em
+}
+
+.divTitreCommentaireModal{
+    max-width: 32%!important;
+}
+
+.closeAvisModalSociete{
+    right:-24%;
+    top:-14%;
+    z-index: 3;
+    color: white!important;
+    opacity: 1!important;
+    text-shadow: none!important;
+}
+
+.spanAvisClientSocieteUnique{
+    vertical-align: 11.5%!important;
+}
+
+.pDescriptionSociete{
+    text-transform: none!important;
+    font-weight: 500!important;
+
+}
+
+
+
+
+.lienAvis {
+    color: black !important;
+    cursor:initial!important;
+}
+
+.lienAvis:hover {
+    color: black!important;
+    text-decoration: none!important;
+}
+
+.spanLienAvis:hover{
+    color: rgb(77, 75, 75);
+}
+
+.modificationX{
+    cursor: pointer; 
+    line-height: 11px; 
+    font-size: 22px;
+}
+
+.iconeModif{
+    font-size: 24px;
+    height: 20px;
+    width: 20px;
+}
+  
+
+.listModif{
+   font-size: 17px;
+   cursor: pointer;
+
+}
+
+#modificationTitreSociete:hover,#modificationMetierSociete:hover,#modificationDateDeCreationSociete:hover,#modificationInstagramSociete:hover,#suppressionCompte:hover{
+    background-color: white;
+}
+
+#inputModifDescription{
+
+    inline-size: none;
+    resize: none;
+    border-radius: 7px;
+    border: 2px solid rgb(175, 175, 175)
+   
+    
+}
+
+#inputModifDescription:focus{
+    
+   
+    outline-style: none!important;
+    border: 2px solid rgb(0, 183, 255)!important;
+    
+}
+
+.listeReseauAjout{
+    list-style: none!important;
+}
+
+#sectionCommentaireUnique{
+    height: 100%;
+    top:0%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.336);
+    position: fixed;
+    z-index: 3!important;
+}
+
+.divAvisEntrepriseUnique{
+    height: 100%;
+    width: 40%;
+    background-color: rgb(42, 165, 48);
+    float: right;
+}
+
+.testIconeAffichage{
+    background-color: #e4e6eb;
+    width: 35px!important;
+    height: 35px!important;
+   border-radius: 50%;
+   
+}
+
+.listSocieteCo:hover{
+    background-color: #e4e6eb;
+}
